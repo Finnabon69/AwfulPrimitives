@@ -24,6 +24,8 @@ namespace AwfulPrimitives
             File.Delete(file);
         }
 
+        ~BadBit() => CleanUp(null, null);
+
         public bool State
         {
             get => File.ReadAllBytes(file)[0] == 1;
